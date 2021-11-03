@@ -1,6 +1,6 @@
 const {UPPERCASE_ARRAY, LOWERCASE_ARRAY} = require('./CONSTANTS')
 
-const encode = (str, k) => {
+const caesarCipher = (str, k) => {
   if (k % 26 === 0) return str;
   while (k < 0) k += 26
   while (k > 26) k -= 26
@@ -16,4 +16,4 @@ function encodeSup (el, arr, k) {
   else return arr[arr.indexOf(el) + k - 26]
 }
 
-module.exports = encode
+module.exports = caesarCipher
